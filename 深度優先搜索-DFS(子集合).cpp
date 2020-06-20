@@ -2,7 +2,7 @@
 using namespace std;
 int answer[16];
 int bucket[16] = { 1 };
-//n�o��O�ܼƪ��d��
+//n³oÃä¬OÅÜ¼Æªº½d³ò
 void dfs(int step, int end, int n)
 {
 	if (step == end + 1)
