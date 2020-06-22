@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
-//¤f¤f¤f+¤f¤f¤f=¤f¤f¤f
-//¤f¤º¬°1~9ªº¼Æ¦r¥B¤£­«½Æ
-//¥Î¥H°O¿ı¤w¸g¥X²{¹Lªº¼Æ¦r
+//å£å£å£+å£å£å£=å£å£å£
+//å£å…§ç‚º1~9çš„æ•¸å­—ä¸”ä¸é‡è¤‡
+//ç”¨ä»¥è¨˜éŒ„å·²ç¶“å‡ºç¾éçš„æ•¸å­—
 int bucket[10] = { 0 };
 int answer[10] = { 0 };
 void dfs(int step)
@@ -21,7 +21,7 @@ void dfs(int step)
 					cout << answer[i];
 		return;
 	}
-	//¤@¯ëª¬ªp
+	//ä¸€èˆ¬ç‹€æ³
 	for (int i = 1; i <= 9; i++)
 	{
 		if (bucket[i] == 0)
