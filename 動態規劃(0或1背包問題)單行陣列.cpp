@@ -4,13 +4,13 @@ using namespace std;
 int cha[200] = { 0 };
 int DP(int n, int w[], int v[], int C)
 {
-	//chartone[i]ªºi¬°­I¥]ªº®e¶q¤W­­
-	//¥ıµ¹¤@¤Uªì­È
+	//chartone[i]çš„iç‚ºèƒŒåŒ…çš„å®¹é‡ä¸Šé™
+	//å…ˆçµ¦ä¸€ä¸‹åˆå€¼
 	for (int i = 0; i <= C; i++)
 		cha[i] = 0;
-	//¼Æ¾Ú
+	//æ•¸æ“š
 	for (int q = 0; q < n; q++)
-		//­I¥]®e¶q
+		//èƒŒåŒ…å®¹é‡
 		for (int p = C; p >= 0; p--)
 			if (p < w[q])
 				continue;
@@ -28,19 +28,19 @@ int main()
 	int v[100];
 	int n, i;
 	int C, buffer;
-	cout << "­I¥]ªº³Ì¤j®e¶q¡G";
+	cout << "èƒŒåŒ…çš„æœ€å¤§å®¹é‡ï¼š";
 	cin >> C;
-	cout << "ª««~¼Æ¡G";;
+	cout << "ç‰©å“æ•¸ï¼š";;
 	cin >> n;
 	for (i = 0; i < n; i++)
 	{
 		cout << endl;
-		cout << "²Ä" << i + 1 << "­Óª««~­«¶q¡G";
+		cout << "ç¬¬" << i + 1 << "å€‹ç‰©å“é‡é‡ï¼š";
 		cin >> w[i];
-		cout << "²Ä" << i + 1 << "­Óª««~»ù­È¡G";
+		cout << "ç¬¬" << i + 1 << "å€‹ç‰©å“åƒ¹å€¼ï¼š";
 		cin >> v[i];
 	}
-	//¥Î­«¶q±Æ§Ç¤@¦¸
+	//ç”¨é‡é‡æ’åºä¸€æ¬¡
 	for (int i = 0; i < n - 1; i++)
 		for (int j = i + 1; j < n; j++)
 			if (w[i] > w[j])
@@ -52,5 +52,5 @@ int main()
 				v[i] = v[j];
 				v[j] = buffer;
 			}
-	cout << "ª««~³Ì¤j»ù­È¬°¡G" << DP(n, w, v, C) << endl;
+	cout << "ç‰©å“æœ€å¤§åƒ¹å€¼ç‚ºï¼š" << DP(n, w, v, C) << endl;
 }
