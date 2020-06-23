@@ -1,0 +1,5 @@
+I/O優化
+ios_base::sync_with_stdio(false);
+解決cout<<flush<<'\n'的問題
+也可以直接cout<<'\n';
+				
