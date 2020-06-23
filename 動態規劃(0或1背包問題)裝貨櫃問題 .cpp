@@ -5,17 +5,17 @@ int cha[200] = { 0 };
 int DP(int n, int w[], int v[], int C)
 {
 	int buffer = -1000;
-	//chartone[i]ªºi¬°­I¥]ªº®e¶q¤W­­
-	//¼Æ¾Ú
+	//chartone[i]çš„iç‚ºèƒŒåŒ…çš„å®¹é‡ä¸Šé™
+	//æ•¸æ“š
 	for (int q = 0; q < n; q++)
-		//­I¥]®e¶q
+		//èƒŒåŒ…å®¹é‡
 	{
 		for (int p = C; p >= 0; p--)
 			if (p < w[q])
 				continue;
 			else
 				cha[p] = max(cha[p], cha[p - w[q]] + v[q]);
-		/*cout << "q = " << q << "ªº®É­Ô" << endl;
+		/*cout << "q = " << q << "çš„æ™‚å€™" << endl;
 		for (int i = 0; i <= C; i++)
 			cout << cha[i] << " ";
 		cout << endl;*/
@@ -38,7 +38,7 @@ int main()
 			cha[i] = { 0 };
 		for (i = 0; i < n; i++)
 			cin >> w[i] >> v[i];
-		//¥Î­«¶q±Æ§Ç¤@¦¸
+		//ç”¨é‡é‡æ’åºä¸€æ¬¡
 		for (int i = 0; i < n - 1; i++)
 			for (int j = i + 1; j < n; j++)
 				if (w[i] > w[j])
