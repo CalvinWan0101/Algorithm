@@ -1,15 +1,15 @@
-/*#include<iostream>
+#include<iostream>
 using namespace std;
 int map[101][101], bucket[101][101] = { 0 };
 int ty, tx, my, mx, y, x, min = 10000000;
 void dfs(int x, int y, int step)
 {
 	int bufferx, buffery;
-	//¥k¤W¥ª¤U
+	//å³ä¸Šå·¦ä¸‹
 	int way[4][2] = { {0,1},{-1,0},{0,-1},{1,0} };
 	if (x == tx && y == ty)
 	{
-		cout << "step´ú¸Õ¡G" << step << endl;
+		cout << "stepæ¸¬è©¦ï¼š" << step << endl;
 		for (int i = 1; i <= my; i++)
 			for (int j = 1; j <= mx; j++)
 				if (bucket[i][j] != 0)
@@ -22,7 +22,7 @@ void dfs(int x, int y, int step)
 	{
 		bufferx = x + way[i][1];
 		buffery = y + way[i][0];
-		//¶W¹L½d³òªº¸Üª½±µcontinue
+		//è¶…éç¯„åœçš„è©±ç›´æ¥continue
 		if (bufferx<1 || buffery<1 || bufferx>mx || buffery>my)
 			continue;
 		if (map[buffery][bufferx] == 0 && bucket[buffery][bufferx] == 0)
